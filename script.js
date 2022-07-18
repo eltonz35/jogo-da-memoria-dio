@@ -29,6 +29,13 @@ function disableCards() { //desabilita as cartas após o click
     secondCard.removeEventListener("click", flipCard);
 }
 
+function unflipedCards() { //função que retorna as cartas ao estado inicial
+    setTimeout(() => {
+    firstCard.classList.remove("flip");
+    secondCard.classList.remove("flip");
+    }, 1500);
+}
+
 cards.forEach((card) => {  //Percorre toda a lista de cartas
     card.addEventListener("click", flipCard);
 });
