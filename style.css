@@ -48,3 +48,8 @@ body {
     transform: rotate(180deg);
 }
 
+/*flip card animation*/
+
+.card.flip {
+    transform: rotateY(180deg);
+}
