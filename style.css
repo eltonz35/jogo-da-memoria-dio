@@ -42,6 +42,7 @@ body {
     position: absolute;
     border-radius: 5px;
     background: #ffffff;
+    backface-visibility: hidden; /*essa propriedade remove o verso do elemento*/
 }
 
 .card-front {
