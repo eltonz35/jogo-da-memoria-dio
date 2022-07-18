@@ -11,14 +11,22 @@ function flipCard() {
     }
 
     secondCard = this;
+    hasFlippdCard = false;
     checkForMatch();
 }
 
-function checkForMatch() { //função que desabilita o click, casa as cartas sejam iguais
+function checkForMatch() { //função que desabilita o click, caso as cartas sejam iguais
     if(firstCard.dataset.card === secondCard.dataset.card) {
         disableCards();
         return;
     }
+
+    unflipedCards();
+}
+
+function disableCards() { //desabilita as cartas após o click
+    firstCard.removeEventListener("click", flipCard);
+    secondCard.removeEventListener("click", flipCard);
 }
 
 cards.forEach((card) => {  //Percorre toda a lista de cartas
