@@ -1,8 +1,11 @@
 const cards = document.querySelectorAll(".card");
 let hasFlippdCard = false;
 let firstCard, secondCard;
+let lockBoard = false;
 
 function flipCard() {
+    if(lockBoard) return;
+
     this.classList.add("flip");
     if(!hasFlippdCard) {
         hasFlippdCard = true;
@@ -30,10 +33,13 @@ function disableCards() { //desabilita as cartas após o click
 }
 
 function unflipedCards() { //função que retorna as cartas ao estado inicial
+    lockBoard = true;
     setTimeout(() => {
-    firstCard.classList.remove("flip");
-    secondCard.classList.remove("flip");
-    }, 1500);
+        firstCard.classList.remove("flip");
+        secondCard.classList.remove("flip");
+
+        lockBoard = false;
+    },  1500);
 }
 
 cards.forEach((card) => {  //Percorre toda a lista de cartas
