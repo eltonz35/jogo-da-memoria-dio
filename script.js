@@ -5,6 +5,7 @@ let lockBoard = false;
 
 function flipCard() {
     if(lockBoard) return;
+    if(this === firstCard) return; //caso clique duas vezes na mesma carta, não acontece nada
 
     this.classList.add("flip");
     if(!hasFlippdCard) {
