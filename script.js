@@ -31,6 +31,8 @@ function checkForMatch() { //função que desabilita o click, caso as cartas sej
 function disableCards() { //desabilita as cartas após o click
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
+
+    resetBoard();
 }
 
 function unflipedCards() { //função que retorna as cartas ao estado inicial
@@ -39,8 +41,13 @@ function unflipedCards() { //função que retorna as cartas ao estado inicial
         firstCard.classList.remove("flip");
         secondCard.classList.remove("flip");
 
-        lockBoard = false;
+        resetBoard();
     },  1500);
+}
+
+function resetBoard() { //reseta as variáveis após cada jogada
+    [hasFlippdCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
 }
 
 cards.forEach((card) => {  //Percorre toda a lista de cartas
