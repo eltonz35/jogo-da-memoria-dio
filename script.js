@@ -50,6 +50,13 @@ function resetBoard() { //reseta as variáveis após cada jogada
     [firstCard, secondCard] = [null, null];
 }
 
+(function shufflle() {
+    cards.forEach((card) =>{
+        let ramdomPosition = Math.floor(Math.random() * 12);
+        card.style.order = ramdomPosition;
+    });
+})();
+
 cards.forEach((card) => {  //Percorre toda a lista de cartas
     card.addEventListener("click", flipCard);
 });
