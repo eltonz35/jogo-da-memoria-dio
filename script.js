@@ -50,7 +50,7 @@ function resetBoard() { //reseta as variáveis após cada jogada
     [firstCard, secondCard] = [null, null];
 }
 
-(function shufflle() {
+(function shufflle() { //embaralha as cartas
     cards.forEach((card) =>{
         let ramdomPosition = Math.floor(Math.random() * 12);
         card.style.order = ramdomPosition;
