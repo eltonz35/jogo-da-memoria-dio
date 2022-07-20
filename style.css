@@ -11,8 +11,8 @@ body {
 }
 
 .memory-game {
-    width: 640px;
-    height: 640px;
+    width: 720px;
+    height: 720px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -20,8 +20,8 @@ body {
 }
 
 .card {
-    height: calc(33.333% - 10px);
-    width: calc(25% - 10px);
+    height: calc(24% - 10px);
+    width: calc(20% - 10px);
     margin: 5px;
     position: relative;
     box-shadow: 1px 1px 1px rgba(1, 1, 1, .3);
