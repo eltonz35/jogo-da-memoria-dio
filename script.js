@@ -52,7 +52,7 @@ function resetBoard() { //reseta as variáveis após cada jogada
 
 (function shufflle() { //embaralha as cartas
     cards.forEach((card) =>{
-        let ramdomPosition = Math.floor(Math.random() * 12);
+        let ramdomPosition = Math.floor(Math.random() * 10);
         card.style.order = ramdomPosition;
     });
 })();
