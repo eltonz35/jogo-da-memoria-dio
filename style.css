@@ -33,7 +33,7 @@ body {
 
 .card:active {
     transform: scale(0.97);
-    transition: transform .3s;
+    transition: transform .2s;
 }
 
 .card-front, .card-back {
