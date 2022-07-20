@@ -46,7 +46,7 @@ body {
 }
 
 .card-front {
-    transform: rotate(180deg);
+    transform: rotateY(180deg);
 }
 
 /*flip card animation*/
